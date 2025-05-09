@@ -1,0 +1,37 @@
+Folder Structure 
+nodenewstatic/
+├── node_modules/
+├── public/                 
+│   ├── index.html 
+├── package-lock.json           
+├── package.json            
+└── index.js               
+
+Commands in terminal
+npm init -y
+npm install
+npm install express 
+node index.js
+
+index.js
+const express=require('express')
+const app=express()
+
+app.use(express.static('public'))
+
+app.listen(7000,()=>{
+    console.log("Server is running")
+})
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello
+</body>
+</html>
