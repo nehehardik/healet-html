@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Profile Page</h2>
+    <form action="#" class="form-control">
+        <h4><script>document.write(localStorage.getItem('name'));</script></h4>
+        <button type="button" onclick="logout()" id="save_btn">Logout</button>
+    </form>
+    <script>
+        let name=localStorage.getItem('name')?localStorage.getItem('name'):
+        concole.log(name);
+        if(name==""){
+            alert("Login First");
+            window.location.href="Login.html"
+        }
+        function logout(){
+            localStorage.removeItem('name');
+            localStorage.removeItem('email');
+            window.location.href="Login.html";
+        }
+    </script>
+</body>
+</html>
