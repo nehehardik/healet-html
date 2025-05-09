@@ -1,0 +1,33 @@
+ 1.docker -v
+
+2.docker images
+
+3.docker ps
+
+4.docker images
+
+5.docker pull openjdk
+
+6.docker images
+
+7.docker run --name JAVA -it -d openjdk
+
+8.docker ps
+
+9.docker exec -it JAVA jshell
+
+it will open jshell
+
+jshell> System.out.println("hello world");
+
+jshell> int a=10;
+
+jshell> int b=20;
+
+jshell> System.out.println(a+b); 
+
+jshell> /exit
+
+10.>docker ps
+
+11.docker stop
